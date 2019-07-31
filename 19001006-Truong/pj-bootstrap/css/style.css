@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Pro|Montserrat|Open+Sans|Saira+Stencil+One&display=swap');
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Saira Stencil One', cursive;
+font-family: 'Crimson Pro', serif;
+font-family: 'Montserrat', sans-serif; */
 /* START CSS HEADER*/
 *{box-sizing: border-box}
 @font-face {
@@ -13,12 +18,12 @@ body {
     font-size: 18px;
     font-weight: 500;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h4, h5, h6 {
     margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2;
 }
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+html, body, div, span, applet, object, iframe, h1, h2, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
 img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
 i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
@@ -32,6 +37,49 @@ section, summary, time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 }
+/*START CSS MODAL */
+.modal-header {
+    font-family: 'Open Sans', sans-serif;
+    display: -ms-flexbox;
+    display: inline-block;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+.modal-body .container-fluid .row section{
+    width: 100%;
+    padding: 10px 0px;
+}
+.modal-content h4{
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+.modal-body .container-fluid .row section input{
+    line-height: 2rem;
+    width: 100%;
+    padding: 10px 5px;
+    background: #f1f1f1;
+    border: none;
+}
+.modal-footer::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.modal-footer button {
+    background: #5eb762;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+/*END CSS MODAL */
 header .container-fluid .nav a{
     color: whitesmoke;
     font-family: "Roboto";
@@ -40,6 +88,7 @@ header .container-fluid .nav a:hover{
     color: #f26b38;
     font-family: "Roboto";
     text-decoration: none;
+    cursor: pointer;
 }
 header .container-fluid .nav a.botarrow::after{
     font-family: 'FontAwesome';
