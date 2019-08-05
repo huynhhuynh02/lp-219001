@@ -1,0 +1,41 @@
+.head-top {
+    background: #F3F5F6;
+    color: #0072BC;
+}
+.head-top h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+.hh {
+    background: #E7EBEE;
+    padding: 10px;
+}
+.hh table {
+    background: white;
+}
+.hh table th {
+    padding: 5px;
+    font-size: 13px;
+}
+.hh table .tenhh {
+    font-weight: 300;
+}
+.hh table td {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.hh table td input {
+    width: 100%;
+    text-align: end;
+    font-weight: 700;
+}
+@media (max-width: 767.98px) {
+    .hh table td input {
+        width: 64px;
+        text-align: end;
+        font-weight: 700;
+    }
+}

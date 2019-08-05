@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 4</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="tongquan.css" medial="all" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Menu TOP-->
+        <div class="row menu navbar navbar-dark navbar-expand-md">
+            <div class="img navbar">
+                <a href="tongquan.html"><img src="img/logo.svg" /></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav d-md-flex d-block">
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="tongquan.html">
+                            <i class="fa fa-tachometer" aria-hidden="true"></i>
+                            Tổng quan</a>
+                    </li>
+                    <li class="nav-item dropdown pt-1">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cubes"" aria-hidden=" true"></i>
+                            Hàng hóa</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="thucdon.html">Thực đơn</a>
+                            <a class="dropdown-item" href="tlbanggia.html">Thiết lập bảng giá</a>
+                        </div>
+                    </li>
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="thungan.html">
+                            <i class="fa fa-window-restore" aria-hidden="true"></i>
+                            Màng hình thu ngân</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Content-->
+        <div class="row header">
+            <p>TỔNG QUAN<p>
+        </div>
+        <div class="row content content_1 py-3">
+            <div class="col-12 col-md-6 pr-md-2">
+                <div class="box col-12">
+                    <div class="box-1 row">
+                        <div class="box-1-1 col-6 py-2 px-2">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <span class="total row">0</span>
+                            <span class="cmt">ĐƠN HÀNG</span>
+                        </div>
+                        <div class="box-1-1 col-6 py-2 px-2">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            <span class="total row">0</span>
+                            <span class="cmt">DOANH THU</span>
+                        </div>
+                    </div>
+                    <div class="box-1 row">
+                        <div class="box-1-1 col-6 py-2 px-2">
+                            <i class="fa fa-reply" aria-hidden="true"></i>
+                            <span class="total row">0</span>
+                            <span class="cmt">ĐƠN HÀNG</span>
+                        </div>
+                        <div class="box-1-1 col-6 py-2 px-2">
+                            <i class="fa fa-reply-all" aria-hidden="true"></i>
+                            <span class="total row">0</span>
+                            <span class="cmt">DOANH THU</span>
+                        </div>
+                    </div>
+                    <div class="box-2"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 pl-md-2">
+                <div class="box">
+                    <div class="box col-12">
+                        <div class="box-1 row">
+                            <div class="box-1-1 col-6 py-2 px-2">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <span class="total row">0</span>
+                                <span class="cmt">TIỀN MẶT</span>
+                            </div>
+                            <div class="box-1-1 col-6 py-2 px-2">
+                                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                                <span class="total row">0</span>
+                                <span class="cmt">TÀI KHOẢN KHÁC</span>
+                            </div>
+                        </div>
+                        <div class="box-1 row">
+                            <div class="box-1-1 col-6 py-2 px-2">
+                                <i class="fa fa-address-card" aria-hidden="true"></i>
+                                <span class="total row">0</span>
+                                <span class="cmt">ĐƠN HÀNG</span>
+                            </div>
+                            <div class="box-1-1 col-6 py-2 px-2">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <span class="total row">0</span>
+                                <span class="cmt">DOANH THU</span>
+                            </div>
+                        </div>
+                        <div class="box-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row content content_2">
+            <div class="col-12 col-md-9 content_2-1">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content_2-1-1">
+                            <header>
+                                <h6>DOANH THU TRONG 7 NGÀY TRƯỚC</h6>
+                            </header>
+                            <div class="col-md-12">
+                                <canvas id="myChart" style="width: 800px;height: 230px"></canvas>
+                                <script>
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['1/7', '2/7', '3/7', '4/7', '5/7', '6/7', '7/7'],
+                                            datasets: [{
+                                                label: 'Đà Nẵng',
+                                                data: [7, 5, 3, 5, 2, 3, 12],
+                                                backgroundColor: [
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                    'rgba(6, 148, 26, 1)',
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                xAxes: [{
+                                                    stacked: true
+                                                }],
+                                                yAxes: [{
+                                                    stacked: true
+                                                }]
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sell-revenue">
+                    <div class="col-4 d-md-block d-none">
+                        <div class="sell mt-2 mb-5">
+                            <p class="p-2">HÀNG BÁN CHẠY</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="revenue mt-2">
+                            <p class="p-2">DOANH THU THEO CHI NHÁNH</p>
+                            <div class="pt-3">
+                                <canvas id="myChart-1" style="width: 600px;height: 230px"></canvas>
+                                <script>
+                                    var ctx = document.getElementById('myChart-1').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'horizontalBar',
+                                        data: {
+                                            labels: ['ĐÀ NẴNG'],
+                                            datasets: [{
+                                                label: 'Đà Nẵng',
+                                                data: [30],
+                                                backgroundColor: [
+                                                    'rgba(6, 148, 26, 1)',
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                xAxes: [{
+                                                    stacked: true
+                                                }],
+                                                yAxes: [{
+                                                    stacked: true
+                                                }]
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 t-hotline">
+                <div class="hotline">
+                    <div class="p p-1">
+                        <p class="p-2">HOTLINE:</p>
+                        <p class="pt-2">1900 4515</p>
+                    </div>
+                    <i class="fa fa-phone-square p-2" aria-hidden="true"></i>
+                </div>
+                <div class="pb mt-2">
+                    <div class="p p-1">
+                        <p class="p-2">LỊCH ĐẶT PHÒNG/BÀN</p>
+                    </div>
+                    <i class="fa fa-calendar p-2" aria-hidden="true"></i>
+                </div>
+                <div class="sms mt-2">
+                    <div class="p p-1">
+                        <p class="p-2">GỞI TIN SMS</p>
+                    </div>
+                    <i class="fa fa-envelope p-2" aria-hidden="true"></i>
+                </div>
+                <div class="hd mt-2 mb-5">
+                    <div class="hd-1">
+                        <p class="p-2">HOẠT ĐỘNG GẦN ĐÂY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

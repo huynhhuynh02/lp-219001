@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thu Ngân</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="thungan.css" medial="all" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--TOP-->
+        <div class="row navbar top">
+            <div>
+                <div class="img">
+                    <a href="tongquan.html"><img src="img/logo.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <!--CONTENT-->
+        <div class="row">
+            <div class="col-12 col-md-7 main">
+                <!--ORDER-->
+                <div class="row">
+                    <div class="main-top col-12">
+                        <div class="row">
+                            <table class="table" id="table-choose">
+                                <thead class="col-12">
+                                    <tr>
+                                        <th class="thh">TÊN HÀNG HÓA</th>
+                                        <th>DVT</th>
+                                        <th class="sl">SL</th>
+                                        <th>ĐƠN GIÁ</th>
+                                        <th class="thanhtien">THÀNH TIỀN</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="orderlist">
+
+                                </tbody>
+                            </table>
+                            <div class="bg">
+                                <p class="pt-5">Chưa có mặt hàng nào trong danh sách</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--PAY-->
+                <div class="row deal">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <div class="row">
+                            <p class="col-6">Tổng thành tiền</p>
+                            <p id="totalprice" class="col-6 ttt">0</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6">Chiết khấu</p>
+                            <p class="col-6 dongia">0</p>
+                        </div>
+                        <div class="row v-t">
+                            <p class="col-6 a">VAT</p>
+                            <div class="col-6 vat">
+                                0
+                            </div>
+                        </div>
+                        <div class="row v-t">
+                            <p class="col-6 a">Tổng cộng</p>
+                            <div class="col-6 vat" id="tongcong">
+                                0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="col-7">Tiền khách trả</p>
+                            <div class="col-5 dongia">
+                                <input id="money-k" name=money type="text" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="col-6">Tiền Thừa</p>
+                            <p id="money-t" class="col-6 ttt">0</p>
+                        </div>
+                    </div>
+                    <div class="col-12 end">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-primary btn-1">
+                                            <i class="fa fa-retweet" aria-hidden="true"></i>
+                                            Chuyển bàn</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-primary btn-1">
+                                            <i class="fa fa-print" aria-hidden="true"></i>
+                                            Báo chế biến [F9]</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-primary btn-1">
+                                            <i class="fa fa-cut" aria-hidden="true"></i>
+                                            Tách bàn</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-warning btn-1">
+                                            <i class="fa fa-print" aria-hidden="true"></i>
+                                            Tạm tính [F3]</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 tt">
+                                <button type="button" class="btn btn-success btn-2">
+                                    <div class="row justify-content-center">
+                                        <p class="col-4">Thanh toán</p>
+                                    </div>
+                                    <div class="cart">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MENU-->
+            <div class="col-12 col-md-5 menu">
+                <div class="row">
+                    <ul class="nav nav-pills mb-3 col-12" id="pills-tab" role="tablist">
+                        <li class="nav-item col-6 pl-2 pr-1 pt-2">
+                            <a class="nav-link active" id="pills-home-tab" onclick="openTablepb()" data-toggle="pill"
+                                href="#pills-home" role="tab" aria-controls="pills-home"
+                                aria-selected="true">PHÒNG/BÀN</a>
+                        </li>
+                        <li class="nav-item col-6 pl-1 pr-2 pt-2">
+                            <a class="nav-link" id="pills-profile-tab" onclick="openTablemenu()" data-toggle="pill"
+                                href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">THỰC ĐƠN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="tab-content col-12" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="row px-2 py-1">
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.1
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.2
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.3
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.4
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.5
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.6
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row px-2 py-1">
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.7
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.8
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.9
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.10
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.11
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.12
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row px-2 py-1">
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.13
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.14
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.15
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.16
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.17
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.18
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row px-2 py-1">
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.19
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.20
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.21
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.22
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.23
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.24
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row px-2 py-1">
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.25
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.26
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.27
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.28
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.29
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" onclick="hiddenTable()" class="btn btn-block py-3">
+                                        B.30
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="row">
+                                <div class="col-3 menu-k" dongia="30000" ten="MILANO">
+                                    <img class="menu-img" src="img-menu/1.jpg" />
+                                    <span class="menu-name">MILANO</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="30000" ten="APEROL SPRITZ">
+                                    <img class="menu-img img-n" src="img-menu/2.jpg" />
+                                    <span class="menu-name">APEROL SPRITZ</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="30000" ten="CUBA LIBRE">
+                                    <img class="menu-img" src="img-menu/3.jpg" />
+                                    <span class="menu-name">CUBA LIBRE</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="30000" ten="GIN FIZZ">
+                                    <img class="menu-img" src="img-menu/4.jpg" />
+                                    <span class="menu-name">GIN FIZZ</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 menu-k" dongia="30000" ten="BLOODY MARY">
+                                    <img class="menu-img" src="img-menu/5.jpg" />
+                                    <span class="menu-name">BLOODY MARY</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="BÁNH MỲ">
+                                    <img class="menu-img img-n" src="img-menu/6.jpg" />
+                                    <span class="menu-name">BÁNH MỲ</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="THỊT NGUỘI">
+                                    <img class="menu-img" src="img-menu/7.jpg" />
+                                    <span class="menu-name">THỊT NGUỘI</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="THỊT NGUỘI TÂY">
+                                    <img class="menu-img" src="img-menu/8.jpg" />
+                                    <span class="menu-name">THỊT NGUỘI TÂY</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 menu-k" dongia="125000" ten="PHOMAI DÂY NGA">
+                                    <img class="menu-img" src="img-menu/9.jpg" />
+                                    <span class="menu-name">PHOMAI DÂY NGA</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="XÚC XÍCH ĐỨC">
+                                    <img class="menu-img img-n" src="img-menu/10.jpg" />
+                                    <span class="menu-name">XÚC XÍCH ĐỨC</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="SÚP KEM RAU">
+                                    <img class="menu-img" src="img-menu/11.jpg" />
+                                    <span class="menu-name">SÚP KEM RAU</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="SÚP KEM GÀ">
+                                    <img class="menu-img" src="img-menu/12.jpg" />
+                                    <span class="menu-name">SÚP KEM GÀ</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 menu-k" dongia="125000" ten="SÚP HÀNH TÂY">
+                                    <img class="menu-img" src="img-menu/13.jpg" />
+                                    <span class="menu-name">SÚP HÀNH TÂY</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="SÚP BÍ ĐỎ">
+                                    <img class="menu-img img-n" src="img-menu/14.jpg" />
+                                    <span class="menu-name">SÚP BÍ ĐỎ</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="125000" ten="SÚP KEM KIỂU PARIS">
+                                    <img class="menu-img" src="img-menu/15.jpg" />
+                                    <span class="menu-name">SÚP KEM KIỂU PARIS</span>
+                                </div>
+                                <div class="col-3 menu-k" dongia="15000" ten="LEMON TEA">
+                                    <img class="menu-img" src="img-menu/16.jpg" />
+                                    <span class="menu-name">LEMON TEA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        //MENU
+        function openTablepb() {
+            var table = document.getElementById("pills-home");
+            table.style = "display:block";
+            var menu = document.getElementById("pills-profile");
+            menu.style = "display:none";
+        }
+        function openTablemenu() {
+            var table = document.getElementById("pills-home");
+            table.style = "display:none";
+            var menu = document.getElementById("pills-profile");
+            menu.style = "display:block;opacity:1";
+        }
+        function hiddenTable() {
+            var table = document.getElementById("pills-home");
+            table.style = "display:none";
+            document.getElementById("pills-home-tab").classList.remove("active");
+            document.getElementById("pills-profile-tab").classList.add("active");
+            var menu = document.getElementById("pills-profile");
+            menu.style = "display:block;opacity:1";
+        }
+    </script>
+
+    <script src="bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+        //Order
+        $(document).ready(function () {
+            $('#pills-profile .menu-k').click(function () {
+                var tongthanhtien = 0;
+                var flag = true;
+                var dongia = Number($(this).attr("dongia"));
+                var name = $(this).attr("ten");
+                var thanhtien = $(this).attr("dongia");
+                if ($(".orderlist").is(":empty")) {
+                    
+                } else {
+                    $(".bg").css("display", "none");
+                }
+                $('#table-choose > tbody  > tr').each(function () {
+                    var id = $(this).attr("id");
+                    if (name == id) {
+                        flag = false;
+                        var soluong = Number($(this).find('td').eq(2).find('input').val());
+                        soluong += 1;
+                        $(this).find('td').eq(2).find('input').val(soluong);
+                        $(this).find('td').eq(4).val();
+                        thanhtien = (dongia * soluong);
+                        $(this).find('td').eq(4).text(thanhtien);
+                    }
+                });
+                if (flag == true) {
+
+                    $(".orderlist").append('<tr id="' + name + '"><td>' + name + '</td><td></td><td>\n' +
+                        '<div class="input-group flex-nowrap"><div class="input-group-prepend reducedqty"><span class="input-group-text" id="addon-wrapping">-</span></div>\n'
+                        + '<input type="text" name="SL" value="1" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">\n' +
+                        '<div class="input-group-prepend increaseqty"><span class="input-group-text " id="addon-wrapping">+</span></div></div>\n' +
+                        '</td><td>' + dongia + '</td><td>' + thanhtien + '</td></tr>');
+                }
+                $('#table-choose> tbody> tr').each(function () {
+                    var price = Number($(this).find("td").eq(4).text());
+                    tongthanhtien += price;
+                    $('#totalprice').text(tongthanhtien);
+                    $('#tongcong').text(tongthanhtien);
+                })
+            });
+            //PAY
+            $("#money-k").on("keypress blur", function (event) {
+                if ((event.which < 48 || event.which > 57)) {
+                    event.preventDefault();
+                }
+            });
+            $('#money-k').keyup(function () {
+                var totalmoney = $('#totalprice').text();
+                var tienthua = 0;
+                tienthua = $(this).val() - totalmoney;
+                $('#money-t').text(tienthua);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 4</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="tongquan.css" medial="all" />
+    <link rel="stylesheet" type="text/css" href="tlbanggia.css" medial="all" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!--Menu TOP-->
+        <div class="row menu navbar navbar-dark navbar-expand-md">
+            <div class="img navbar">
+                <a href="tongquan.html"><img src="img/logo.svg" /></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav d-md-flex d-block">
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="tongquan.html">
+                            <i class="fa fa-tachometer" aria-hidden="true"></i>
+                            Tổng quan</a>
+                    </li>
+                    <li class="nav-item dropdown pt-1">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cubes"" aria-hidden=" true"></i>
+                            Hàng hóa</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="thucdon.html">Thực đơn</a>
+                            <a class="dropdown-item" href="tlbanggia.html">Thiết lập bảng giá</a>
+                        </div>
+                    </li>
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="thungan.html">
+                            <i class="fa fa-window-restore" aria-hidden="true"></i>
+                            Màng hình thu ngân</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Content-->
+        <div class="row head-top">
+            <h6 class="p-2">DANH SACH HÀNG HÓA</h6>
+        </div>
+        <div class="row hh">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="tenhh" scope="col" style="width:7%">Mã Hàng Hóa</th>
+                        <th class="tenhh" scope="col" style="width:77%">Tên Hàng Hóa</th>
+                        <th class="tenhh" scope="col" style="width:10%">Giá Vốn</th>
+                        <th class="tenhh" scope="col" style="width:6%">Giá Bán</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">HH001</td>
+                        <td>MILANO</td>
+                        <td>15,000</td>
+                        <td><input name="giaban" type="text" value="30,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH002</td>
+                        <td>APEROL SPRITZ</td>
+                        <td>15,000</td>
+                        <td><input name="giaban" type="text" value="30,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH003</td>
+                        <td>CUBA LIBRE</td>
+                        <td>15,000</td>
+                        <td><input name="giaban" type="text" value="30,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH004</td>
+                        <td>GIN FIZZ</td>
+                        <td>15,000</td>
+                        <td><input name="giaban" type="text" value="30,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH005</td>
+                        <td>BLOODY MARY</td>
+                        <td>15,000</td>
+                        <td><input name="giaban" type="text" value="30,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH006</td>
+                        <td>CBánh mỳ bỏ lò dăm bông & phomai</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH007</td>
+                        <td>Thịt nguội & phomai viên chiên kiểu Tây Ba Nha</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH008</td>
+                        <td>Đĩa thịt nguội Tây Ba Nha hảo hạng</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH009</td>
+                        <td>Phomai dây Nga</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH010</td>
+                        <td>Xúc xích Đức nướng mù tạt vàng</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH011</td>
+                        <td>Súp kem rau 4 mùa</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH012</td>
+                        <td>Súp kem gà nữ hoàng</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH013</td>
+                        <td>Súp hành tây kiểu Pháp</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH014</td>
+                        <td>Súp kém bí đỏ với sữa dừa</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH015</td>
+                        <td>Súp kem kiểu Paris</td>
+                        <td>105,000</td>
+                        <td><input name="giaban" type="text" value="125,000" /></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">HH016</td>
+                        <td>Lemon Tea</td>
+                        <td>7,000</td>
+                        <td><input name="giaban" type="text" value="15,000" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

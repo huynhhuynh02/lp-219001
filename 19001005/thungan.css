@@ -1,0 +1,182 @@
+*{box-sizing: border-box}
+
+
+/*TOP*/
+.top {
+    background: #0072BC;
+}
+.top .img {
+    width: 40px;
+    height: 40px;
+}
+.top .back {
+    text-align: end;
+}
+.top .fa {
+    font-size: 40px;
+}
+.top .fa-arrow-circle-left {
+    background: #0072BC;
+    color: white;
+}
+
+/*CONTENT*/
+.main {
+    background: #F0F8FF;
+}
+.main .main-top {
+    height: 320px;
+    position: relative;
+    overflow: auto;
+} 
+.main .main-top .bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(img/thungan-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-size: 14px;
+    font-style: oblique;
+}
+.main .main-top .table {
+    font-size: 11px;
+}
+.main .main-top .table .sl{
+    text-align: center;
+}
+.main .main-top .table th {
+    padding: 0.5em;
+}
+.main .main-top .table td {
+    padding: 0.5em;
+}
+.main .main-top .table td input {
+    width: 40px;
+}
+.main .main-top .table .thh {
+    width: 60%;
+}
+.main .main-content {
+    width: 100%;
+    border-bottom: 1px dashed #808080;
+}
+.main .main-content .bg p {
+    font-size: 14px;
+    font-style: italic;
+    color: #8E8080;
+}
+.deal {
+    background: #E7EBEE;
+}
+.deal p {
+    margin: 0;
+    padding: 0.3em;
+    font-size: 15px;
+}
+.deal .dongia {
+    padding-left: 2em;
+}
+.deal .v-t .a {
+    font-weight: bold;
+}
+.deal .btn-1 {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 10px;
+}
+.end .col-6 {
+    padding: 0.5em;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.deal .btn-2 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 10px;
+}
+.end .tt {
+    padding: 0.5em;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.end .tt p {
+    padding: 0;
+}
+.end .tt .cart {
+    padding-top: 0.7em;
+}
+.deal .ttt {
+    color: red;
+    font-weight: bold;
+    text-align: end;
+}
+.deal .dongia {
+    padding: 0;
+    margin: 0;
+    text-align: end;
+    padding: 0.3em;
+}
+.deal .dongia input {
+    width: 100%;
+}
+.deal .vat {
+    text-align: end;
+    color: green;
+    font-weight: bold;
+    padding: 0.3em;
+}
+.deal .tc {
+    text-align: end;
+    color: white;
+}
+.menu {
+    background: #E7EBEE;
+}
+.menu .nav-link {
+    background: #527E8C;
+    color: white;
+    border-radius: 5px;
+}
+.menu .col-6 {
+    padding: 0;
+    text-align: center;
+}
+.menu .nav-pills .nav-link.active{
+    background-color:  #3B5998;
+}
+.menu .tab-content .col-2 {
+    text-align: center;
+    padding-left: 0;
+}
+.menu .tab-content .col-2 .btn {
+    background: #808080;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+}
+.menu .menu-k{
+    height: 135px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 1em;
+    cursor: pointer;
+}
+.menu .menu-k .menu-img {
+    width: 100%;
+    height: 130px;
+    padding: 0;
+}   
+.menu .menu-k .menu-name {
+    position: absolute;
+    top: 83%;
+    left: 11%;
+    background-color:rgba(17,80,100,.7);
+    display: block;
+    width: 78%;
+}

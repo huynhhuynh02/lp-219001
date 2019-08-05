@@ -1,0 +1,205 @@
+*{box-sizing: border-box}
+/*MENU TOP*/
+.menu {
+    background: #0072BC;
+}
+.menu .nav a {
+    color: white;
+}
+ul li:hover {
+    background: #2980B9;
+}
+.menu .img {
+    padding: 0;
+}
+.menu .img img {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+.menu .nav .dropdown .dropdown-menu {
+    background: #2980B9;
+    border: none;
+    border-radius: 0;
+    margin-top: 0.2em;
+}
+.menu .nav .dropdown .dropdown-menu a:hover {
+    color: #707070;
+    background: #f6f6f6;
+}
+/*TỔNG QUAN*/
+.header {
+    background: #F3F5F6;
+    color: #0072BC;
+}
+.content_1 {
+    background: #E7EBEE;
+}
+.header p {
+    padding: 0.7em;
+    padding-left: 4.5em;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.box-1 {
+    background: #fff;
+}
+.box .box-1 .col-6 {
+    padding: 0;
+}
+.box i {
+    float: left;
+}
+.total {
+    font-size: 20px;
+    padding-left: 0.8em;
+}
+.cmt {
+    color: #90A4AE;
+    font-size: 10px;
+    padding-left: 1.5em;
+}
+.box .box-1 {
+    border-bottom: 2px solid #E7EBEE;
+}
+.box .box-1 .box-1-1 {
+    border-right: 2px solid #E7EBEE;
+}
+/*FA*/
+.box .fa {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    float: left;
+    width: auto;
+  }
+.box .fa-tags {
+  background: #3B5998;
+  color: white;
+}
+.box .fa-cart-arrow-down {
+    background: #3B5998;
+  color: white;
+}
+.box .fa-reply {
+    background: #3B5998;
+  color: white;
+}
+.box .fa-reply-all {
+    background: #3B5998;
+  color: white;
+}
+.box .fa-money {
+    background: #3B5998;
+    color: white; 
+}
+.box .fa-cc-visa {
+    background: #3B5998;
+    color: white;
+}
+.box .fa-address-card {
+    background: #3B5998;
+    color: white;
+}
+
+/*CONTENT*/
+.content_2 {
+    background: #E7EBEE;
+}
+.content_2 h6 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0088D4;
+    padding: 1em;
+}
+.content_2 .content_2-1-1 {
+    background: #FFF;
+}
+.hotline {
+    background: #FFF;
+    display: flex;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.pb {
+    background: #FFF;
+    display: flex;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.sms {
+    background: #FFF;
+    display: flex;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.hd {
+    background: #FFF;
+    height: 450px;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.sell {
+    background: #FFF;
+    height: 350px;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.revenue {
+    background: #FFF;
+    height: 350px;
+    border-bottom: 2px solid #D2D6D8;
+    border-radius: 3px;
+}
+.sell-revenue p {
+    color: #0072CB;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.content .t-hotline .p {
+    width: 80%;
+    display: flex;
+}
+.content .t-hotline p {
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+.hotline .p .pt-2 {
+    color: red;
+}
+.content .t-hotline .p-2 {
+    color: #0072CB;
+}
+.hotline i {
+    width: 20%;
+}
+.content .t-hotline .fa {
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    width: auto;
+}
+.t-hotline .fa-phone-square {
+    color: #0072CB;
+}
+.t-hotline .fa-calendar {
+    color: #0072CB
+}
+@media (max-width: 767.98px) { 
+    .revenue {
+        background: #FFF;
+        height: auto;
+        border-bottom: 2px solid #D2D6D8;
+        border-radius: 3px;
+    };
+ }

@@ -1,0 +1,29 @@
+.head-top {
+    background: #F3F5F6;
+    color: #0072BC;
+}
+.head-top h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+.hh {
+    background: #E7EBEE;
+    padding: 10px;
+}
+.hh table {
+    background: white;
+}
+.hh table th {
+    padding: 5px;
+    font-size: 13px;
+}
+.hh table .tenhh {
+    font-weight: 300;
+}
+.hh table td {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
